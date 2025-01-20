@@ -10,8 +10,10 @@ export const config = {
     uri: process.env.MONGO_URI, 
   },
   jwt: {
-    secret: process.env.JWT_SECRET, 
-    expiry: process.env.JWT_EXPIRY || '7d', 
+    accessSecret: process.env.ACCESS_TOKEN_SECRET, 
+    accessExpiry: process.env.ACCESS_TOKEN_LIFETIME|| '15m', 
+    refreshSecret: process.env.REFRESH_TOKEN_SECRET,
+    refreshExpiry: process.env.REFRESH_TOKEN_LIFETIME || '7d'
   },
   email: {
     sendGridApiKey: process.env.SENDGRID_API_KEY, 
