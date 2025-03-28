@@ -11,9 +11,9 @@ export const config = {
   },
   jwt: {
     accessSecret: process.env.ACCESS_TOKEN_SECRET, 
-    accessExpiry: process.env.ACCESS_TOKEN_LIFETIME|| '15m', 
+    accessExpiry: process.env.ACCESS_TOKEN_LIFETIME, 
     refreshSecret: process.env.REFRESH_TOKEN_SECRET,
-    refreshExpiry: process.env.REFRESH_TOKEN_LIFETIME || '7d'
+    refreshExpiry: process.env.REFRESH_TOKEN_LIFETIME,
   },
   email: {
     sendGridApiKey: process.env.SENDGRID_API_KEY, 
