@@ -1,4 +1,4 @@
-import * as authService from "./auth.service.js";
+import * as auth_service from "./auth.service.js";
 import config from "../../config/dotenv.js";
 
 const NODE_ENV = config.NODE_ENV;
@@ -7,7 +7,7 @@ export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    const admin_login = await authService.login_admin(email, password);
+    const admin_login = await auth_service.login_admin(email, password);
 
     res.cookie("access_token", admin_login.access_token, {
       httpOnly: true,
